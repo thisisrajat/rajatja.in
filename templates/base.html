@@ -2,21 +2,24 @@
 <html>
 <head>
   <title>{{ vars['title'] }}</title>
-  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="../static/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src = "../static/js/script.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{{ vars['bootstrap'] }}">
+  <link rel="stylesheet" type="text/css" href=" {{ vars['customsheet'] }} ">
+  <script src="{{ vars['jquery'] }}"></script>
+  <script src="{{ vars['bootstrapjs'] }}"></script>
+  <script type="text/javascript" src = "{{ vars['script'] }}"></script>
+  <link href="{{ vars['font'] }}" rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class = "circle">
   </div>
+  <span class = "name">
+    Rajat Jain
+  </span>
   <div class = "fixed-left">
     <ul class="nav nav-pills nav-stacked">
      <li id = "about" role="presentation"><a href="#about" onclick="about()">About</a></li>
      <li id = "projects" role="presentation"><a href="#projects" onclick="projects()">Projects</a></li>
-     <li id = "blog" role="presentation"><a href="#blog" onclick="progress()">Blog</a></li>
+     <li id = "blog" role="presentation"><a href="//blog.rajatja.in" >Blog</a></li>
      <li id = "resume" role="presentation"><a href="../static/resume.pdf" onclick="resume()">Resume</a></li>
      <li id = "contact" role="presentation"><a href="#contact" onclick="contact()">Contact</a></li>
    </ul>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The best Four oh Four page ever!!</title>
+</head>
+<link href="{{ vars['font'] }}" rel='stylesheet' type='text/css'>
+<style type="text/css">
+  .image-source {
+    position: relative;
+    text-align: center;
+  }
+  .pre-text {
+    position: relative;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em; 
+  }
+  .message-text {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    color: gray;
+    text-align: center;
+  }
+  .footer {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: red;
+    text-align: center;
+  }
+</style>
+<body>
+  <div class = "image-source">
+    <img src = " {{ error_message['media'] }}"/>
+  </div>
+  <div>
+    <p class = "pre-text">
+      {{ error_message['pre'] }}
+    </p>
+    <p class ="message-text">
+      {{ error_message['message'] }}
+    </p>
+  </div>
+  <div class = "footer">
+    <a href = "/">{{ error_message['return_message'] }}</a>
+  </div>
+</body>
+</html>
