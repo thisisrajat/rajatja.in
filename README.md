@@ -1,2 +1,2 @@
 # rajatja.in
-Code that powers my homepage
+Code that powers my homepage.
