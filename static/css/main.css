@@ -1,0 +1,41 @@
+.fixed-left {
+  font-family: 'Open Sans', sans-serif;
+  width: 20%;
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  font-size: 1.4em;
+}
+
+.circle {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  background-image: url("../img/profile-picture.jpg");
+  background-size: cover;
+  top: 2%;
+  left: 10%;
+}
+
+.wrapper {
+  position: absolute;
+  left: 35%;
+  top: 11%;
+  width: 55%;
+}
+
+.about-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.4em;  
+}
+
+.contact-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+}
+
+.contact-content img {
+  margin-bottom: 0.5em;
+}
