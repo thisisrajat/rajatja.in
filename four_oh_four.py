@@ -30,7 +30,7 @@ error_message = [
     'return_message' : 'Quick, click me'
   },
   {
-    'message' : 'It\'s P as in "pheobe," H as in "heobe," O as in "oebe," E as in "ebe," B as in "bebe," and E as in "ello there, mate!"',
+    'message' : 'It\'s P as in "phoebe," H as in "hoebe," O as in "oebe," E as in "ebe," B as in "bebe," and E as in "ello there, mate!"',
     'pre' : 'You need to spell like her',
     'media' : '../static/img/404/pheobe.png',
     'return_message' : 'Leave the weird land'
@@ -42,7 +42,7 @@ error_message = [
     'return_message' : 'Go back to the fellow processors'
   },
   {
-    'message' : 'Pheobe: Je m\'appelle Claude <br /> Joey: Jet aplee blooo',
+    'message' : 'Phoebe: Je m\'appelle Claude <br /> Joey: Jet aplee blooo',
     'pre': 'Look Joey\'s just as good as you are',
     'media' : '../static/img/404/french.png',
     'return_message': 'Le felmno Poo?'
