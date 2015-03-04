@@ -1,15 +1,13 @@
 from flask import Flask, render_template, request, make_response, redirect
-from random import randint
+from random import randint, shuffle
 import os
 from four_oh_four import error_message
 
-
 app = Flask(__name__)
-
 
 # Global Variables
 vars = {}
-vars['title'] = 'Rajat Jain | I make jokes when I am uncomfortable'
+vars['title'] = 'Rajat Jain | '
 vars['bootstrap'] = '../static/css/bootstrap.min.css'
 vars['customsheet'] = '../static/css/main.css'
 vars['script'] = '../static/js/script.js'
@@ -21,31 +19,56 @@ vars['font'] = 'http://fonts.googleapis.com/css?family=Open+Sans'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 
+ABOUT_CONTENT = '''Hey! I am <strong>Rajat Jain</strong>. I am an undergraduate in my junior year, majoring in computer science. I like solving algorithmic puzzles, getting caffinated at odd times of day, coding in Python and Javascript. Few years back I started participating in programming contests and I've been hooked ever since. Also, I have a knack for minimal UX. If you want to hire me or need a hand with something or just want to say hi, <a href="#contact" onclick="contact()">contact me</a>.'''
+
+CONTACT_LIST = [
+  '<img src = "../static/img/facebook.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://www.facebook.com/Rajat.legend">Facebook - Which I stopped using</a></img>', 
+  '<img src = "../static/img/googleplus.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://plus.google.com/u/0/117644368358855184827/posts">Google+ - On which I am popular</a></img>', 
+  '<img src = "../static/img/twitter.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://twitter.com/thisisrajat">Twitter - Which I suck at</a></img>', 
+  '<img src = "../static/img/linkedin.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://in.linkedin.com/in/thisisrajat">LinkedIn - Which will get me a job</a></img>',
+  '<img src = "../static/img/github.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://github.com/thisisrajat/">Github - Which I like</a></img>',
+  '<img src = "../static/img/skype.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "#">Skype - Where you can see me (Username: thisisrajatjain)</a></img>',
+  '<img src = "../static/img/mail.png" height="26px" width="32px">&nbsp;&nbsp;&nbsp;<a href= "mailto:rajat@rajatja.in">Mail - Where I will actually reply</a></img>'
+]
 
 # Index page @ / and /index
-
 @app.route('/')
 @app.route('/index')
 def index():
+  choose_seq = ['Programmer', 'Geek', 'Developer', 'Algorithmist']
+  shuffle(choose_seq)
+  s = ""
+  for name in choose_seq:
+    s += name + ", "
+  s = s[:-2]
+  vars['title'] = vars['title'] + s;
   return render_template('base.html', vars=vars)
 
+# Render about page
+@app.route('/render/about')
+def render_about_page():
+  return ABOUT_CONTENT
 
-# Render the content based on the request via AJAX
+# Render contact me
+@app.route('/render/contact')
+def render_contact_page():
+  str_to_return = "Not good at advice! Can I interest you in a sarcastic comment?<br /><br />"
+  shuffle(CONTACT_LIST)
+  for content in CONTACT_LIST:
+    str_to_return += content + "<br /><br />"
+  return str_to_return
 
-@app.route('/render/<which_page>')
-def render_page(which_page):
-  return render_template('{}.html'.format(which_page))
-
+# Render projects
+@app.route('/render/projects')
+def render_projects_page():
+  return render_template('projects.html')
 
 # Render resume, because why not
-
 @app.route('/resume')
 def render_resume():
   return redirect('static/resume.pdf', code=302)
 
-
 # Friends 404 :)
-
 @app.errorhandler(404)
 def four_oh_four(e):
   index = randint(0, len(error_message) - 1)

@@ -1,5 +1,6 @@
 window.onload = function() {
   document.getElementById('about').className = 'active';
+  about();
   renderHtml('about');
 };
 

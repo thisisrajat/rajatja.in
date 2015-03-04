@@ -42,8 +42,8 @@ error_message = [
     'return_message' : 'Go back to the fellow processors'
   },
   {
-    'message' : 'Phoebe: Je m\'appelle Claude <br /> Joey: Jet aplee blooo',
-    'pre': 'Look Joey\'s just as good as you are',
+    'message' : 'Phoebe: Je m\'appelle Claude; Joey: Jet aplee blooo;',
+    'pre': 'Look Joey\'s just as good as you are in spelling out words',
     'media' : '../static/img/404/french.png',
     'return_message': 'Le felmno Poo?'
   }
