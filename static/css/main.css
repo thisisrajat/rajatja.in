@@ -2,15 +2,15 @@
   font-family: 'Open Sans', sans-serif;
   width: 20%;
   position: fixed;
-  top: 37%;
+  top: 38%;
   left: 7%;
   font-size: 1.4em;
 }
 
 .circle {
   position: fixed;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
   display: inline-block;
   background-image: url("../img/profile-picture.jpg");
@@ -23,15 +23,15 @@
   position: fixed;
   z-index: 99;
   top: 28.5%;
-  left: 12%;
+  left: 11%;
   font-family: 'Open Sans', sans-serif;
-  font-size: 2.5em;
+  font-size: 2.3em;
 }
 
 .footer {
   position: fixed;
   z-index: -99;
-  top: 80%;
+  top: 85%;
   left: 10%;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
