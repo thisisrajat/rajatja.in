@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Global Variables
 vars = {}
-vars['title'] = 'Rajat Jain | '
+vars['title'] = 'Rajat Jain | I make jokes when I am uncomfortable'
 vars['bootstrap'] = '../static/css/bootstrap.min.css'
 vars['customsheet'] = '../static/css/main.css'
 vars['script'] = '../static/js/script.js'
@@ -35,13 +35,6 @@ CONTACT_LIST = [
 @app.route('/')
 @app.route('/index')
 def index():
-  choose_seq = ['Programmer', 'Geek', 'Developer', 'Algorithmist']
-  shuffle(choose_seq)
-  s = ""
-  for name in choose_seq:
-    s += name + ", "
-  s = s[:-2]
-  vars['title'] = vars['title'] + s;
   return render_template('base.html', vars=vars)
 
 # Render about page
