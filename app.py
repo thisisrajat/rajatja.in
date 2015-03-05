@@ -40,7 +40,6 @@ def index():
 # Render about page
 @app.route('/render/about')
 def render_about_page():
-  time.sleep(5)
   return ABOUT_CONTENT
 
 # Render contact me
