@@ -4,7 +4,6 @@ window.onload = function() {
 };
 
 function renderHtml(name) {
-
   var request = new XMLHttpRequest();
   request.open('GET', '/render/' + name, true);
   request.onreadystatechange = function() {
