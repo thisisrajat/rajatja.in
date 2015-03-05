@@ -1,10 +1,10 @@
 window.onload = function() {
   document.getElementById('about').className = 'active';
   about();
-  renderHtml('about');
 };
 
 function renderHtml(name) {
+
   var request = new XMLHttpRequest();
   request.open('GET', '/render/' + name, true);
   request.onreadystatechange = function() {

@@ -14,7 +14,7 @@ vars['script'] = '../static/js/script.js'
 vars['jquery'] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
 vars['bootstrapjs'] = '../static/js/bootstrap.min.js'
 vars['font'] = 'http://fonts.googleapis.com/css?family=Open+Sans'
-
+vars['spinjs'] = '../static/js/pace.min.js'
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
