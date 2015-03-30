@@ -19,16 +19,16 @@ vars['spinjs'] = '../static/js/pace.min.js'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 
-ABOUT_CONTENT = '''Hey! I am <strong>Rajat Jain</strong>. I am an undergraduate in my junior year, majoring in computer science. I like solving algorithmic puzzles, getting caffinated at odd times of day, coding in Python and Javascript. Few years back I started participating in programming contests and I've been hooked ever since. Also, I have a knack for minimal UX. If you want to hire me or need a hand with something or just want to say hi, <a href="#contact" onclick="contact()">contact me</a>.'''
+ABOUT_CONTENT = '''Hey! I am <strong>Rajat Jain</strong>. I am an undergraduate in my junior year, majoring in <strong>computer science</strong>. I like solving algorithmic puzzles, getting caffinated at odd times of day, coding in <strong>Python</strong> and <strong>Javascript</strong>. Few years back I started participating in programming contests and I've been hooked ever since. Also, I have a knack for minimal UX. If you want to hire me or need a hand with something or just want to say hi, <a href="#contact" onclick="contact()">contact me</a>.'''
 
 CONTACT_LIST = [
-  '<img src = "../static/img/facebook.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://www.facebook.com/Rajat.legend">Facebook - Which I stopped using</a></img>', 
-  '<img src = "../static/img/googleplus.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://plus.google.com/u/0/117644368358855184827/posts">Google+ - On which I am popular</a></img>', 
-  '<img src = "../static/img/twitter.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://twitter.com/thisisrajat">Twitter - Which I suck at</a></img>', 
-  '<img src = "../static/img/linkedin.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://in.linkedin.com/in/thisisrajat">LinkedIn - Which will get me a job</a></img>',
-  '<img src = "../static/img/github.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://github.com/thisisrajat/">Github - Which I like</a></img>',
-  '<img src = "../static/img/skype.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "#">Skype - Where you can see me (Username: thisisrajatjain)</a></img>',
-  '<img src = "../static/img/mail.png" height="26px" width="32px">&nbsp;&nbsp;&nbsp;<a href= "mailto:rajat@rajatja.in">Mail - Where I will actually reply</a></img>'
+  '<img src = "../static/img/facebook.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://www.facebook.com/Rajat.legend">Facebook</a></img>', 
+  '<img src = "../static/img/googleplus.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://plus.google.com/u/0/117644368358855184827/posts">Google+</a></img>', 
+  '<img src = "../static/img/twitter.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://twitter.com/thisisrajat">Twitter</a></img>', 
+  '<img src = "../static/img/linkedin.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://in.linkedin.com/in/thisisrajat">LinkedIn</a></img>',
+  '<img src = "../static/img/github.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://github.com/thisisrajat/">Github</a></img>',
+  '<img src = "../static/img/skype.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "#">Skype @thisisrajatjain</a></img>',
+  '<img src = "../static/img/mail.png" height="26px" width="32px">&nbsp;&nbsp;&nbsp;<a href= "mailto:rajat@rajatja.in">Mail</a></img>'
 ]
 
 # Index page @ / and /index
