@@ -40,7 +40,7 @@ function about() {
   removeActiveClass();
   removeFunnyText();
   document.getElementById('about').className = "active";
-  document.getElementById('about').childNodes[0].innerHTML = 'About - That I wrote';
+  document.getElementById('about').childNodes[0].innerHTML = 'About';
   renderHtml('about');
 }
 
@@ -48,7 +48,7 @@ function projects() {
   removeActiveClass();
   removeFunnyText();
   document.getElementById('projects').className = "active";
-  document.getElementById('projects').childNodes[0].innerHTML = 'Projects - That I code';
+  document.getElementById('projects').childNodes[0].innerHTML = 'Projects';
   renderHtml('projects');
 }
 
@@ -56,7 +56,7 @@ function resume() {
   removeActiveClass();
   removeFunnyText();
   document.getElementById('resume').className = "active";
-  document.getElementById('resume').childNodes[0].innerHTML = 'Resume - That show my competence';
+  document.getElementById('resume').childNodes[0].innerHTML = 'Resume';
   setTimeout(about, 5000);
 }
 
@@ -64,6 +64,6 @@ function contact() {
   removeActiveClass();
   removeFunnyText();
   document.getElementById('contact').className = "active";
-  document.getElementById('contact').childNodes[0].innerHTML = 'Contact me - You know you want to';
+  document.getElementById('contact').childNodes[0].innerHTML = 'Contact me - I know you want to';
   renderHtml('contact');
 }
