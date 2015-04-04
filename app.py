@@ -45,7 +45,7 @@ def render_about_page():
 # Render contact me
 @app.route('/render/contact')
 def render_contact_page():
-  str_to_return = "Not good at advice! Can I interest you in a sarcastic comment?<br /><br />"
+  str_to_return = "I am not good at advice! Can I interest you in a sarcastic comment?<br /><br />"
   shuffle(CONTACT_LIST)
   for content in CONTACT_LIST:
     str_to_return += content + "<br /><br />"
