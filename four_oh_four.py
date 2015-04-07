@@ -15,7 +15,7 @@ error_message = [
     'message' : 'We are on a break',
     'pre' : 'Can\'t process your request because ',
     'media': '../static/img/404/break.jpg',
-    'return_message': 'Go back.'
+    'return_message': 'Go back before the dinosaurs.'
   },
   {
     'message' : 'Welcome to the real world, it sucks. You\'re gonna love it',
@@ -27,13 +27,13 @@ error_message = [
     'message' : 'Oh... My... God...',
     'pre' : 'You\'re doomed', 
     'media' : '../static/img/404/ohmygod.png',
-    'return_message' : 'Quick, click me'
+    'return_message' : 'Quick, click me.'
   },
   {
     'message' : 'It\'s P as in "phoebe," H as in "hoebe," O as in "oebe," E as in "ebe," B as in "bebe," and E as in "ello there, mate!"',
     'pre' : 'You need to spell like her',
     'media' : '../static/img/404/pheobe.png',
-    'return_message' : 'Leave the weird land'
+    'return_message' : 'Leave the weird land!'
   },
   {
     'message' : 'If I don\'t input those numbers... it doesn\'t make much of a difference.',
