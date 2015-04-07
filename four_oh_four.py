@@ -24,7 +24,7 @@ error_message = [
     'return_message': 'Go back :)'
   },
   {
-    'message' : 'Oh... My... Gawd...',
+    'message' : 'Oh... My... God...',
     'pre' : 'You\'re doomed', 
     'media' : '../static/img/404/ohmygod.png',
     'return_message' : 'Quick, click me'
