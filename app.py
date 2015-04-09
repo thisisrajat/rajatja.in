@@ -68,4 +68,4 @@ def four_oh_four(e):
   return render_template('404.html', vars=vars, error_message=error_message[index]), 404
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(debug=False)
