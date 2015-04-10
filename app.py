@@ -18,9 +18,10 @@ vars['spinjs'] = '../static/js/pace.min.js'
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-
+# About content
 ABOUT_CONTENT = '''Hey! I am <strong>Rajat Jain</strong>. I am an undergraduate in my junior year, majoring in <strong>computer science</strong>. I like solving algorithmic puzzles, getting caffinated at odd times of day, coding in <strong>Python</strong> and <strong>Javascript</strong>. Few years back I started participating in programming contests and I've been hooked ever since. Also, I have a knack for minimal UX. If you want to hire me or need a hand with something or just want to say hi, <a href="#contact" onclick="contact()">contact me</a>.'''
 
+# List for contact page
 CONTACT_LIST = [
   '<img src = "../static/img/facebook.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://www.facebook.com/Rajat.legend">Facebook</a></img>', 
   '<img src = "../static/img/googleplus.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://plus.google.com/u/0/117644368358855184827/posts">Google+</a></img>', 
