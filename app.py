@@ -46,11 +46,11 @@ def render_about_page():
 # Render contact me
 @app.route('/render/contact')
 def render_contact_page():
-  str_to_return = "I am not good at advice! Can I interest you in a sarcastic comment?<br /><br />"
+  contact_content = "I am not good at advice! Can I interest you in a sarcastic comment?<br /><br />"
   shuffle(CONTACT_LIST)
   for content in CONTACT_LIST:
-    str_to_return += content + "<br /><br />"
-  return str_to_return
+    contact_content += content + "<br /><br />"
+  return contact_content
 
 # Render projects
 @app.route('/render/projects')
