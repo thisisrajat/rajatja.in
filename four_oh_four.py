@@ -43,7 +43,7 @@ error_message = [
   },
   {
     'message' : 'Phoebe: Je m\'appelle Claude; Joey: Jet aplee blooo;',
-    'pre': 'Look Joey\'s just as good as you are in spelling out words',
+    'pre': 'Look Joey\'s just as good as you, in spelling out words',
     'media' : '../static/img/404/french.png',
     'return_message': 'Le felmno Poo?'
   }
