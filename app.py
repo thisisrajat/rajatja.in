@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, make_response, redirect
 from random import randint, shuffle
-import os
 from four_oh_four import error_message
+import os
 
 app = Flask(__name__)
 
