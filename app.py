@@ -68,10 +68,15 @@ def four_oh_four(e):
   index = randint(0, len(error_message) - 1)
   return render_template('404.html', vars=vars, error_message=error_message[index]), 404
 
-#Because chill maar na yaar ;)
+# Because chill maar na yaar ;)
 @app.route('/chill')
 def chill_maar():
   return render_template('chill.html')
+
+# Booze's Birthday
+@app.route('/happy/birthday/booze')
+def booze():
+  return render_template('booze.html')
 
 if __name__ == '__main__':
   app.run(debug=True)
