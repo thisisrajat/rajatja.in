@@ -5,55 +5,54 @@ import os
 
 app = Flask(__name__)
 
-# Global Variables
-vars = {}
-vars['title'] = 'Rajat Jain | I make jokes when I am uncomfortable'
-vars['bootstrap'] = '../static/css/bootstrap.min.css'
-vars['customsheet'] = '../static/css/main.css'
-vars['script'] = '../static/js/script.js'
-vars['jquery'] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'
-vars['bootstrapjs'] = '../static/js/bootstrap.min.js'
-vars['font'] = 'http://fonts.googleapis.com/css?family=Open+Sans'
-vars['spinjs'] = '../static/js/pace.min.js'
-
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-# About content
-ABOUT_CONTENT = '''Hey! I am <strong>Rajat Jain</strong>. I am an undergraduate in my junior year, majoring in <strong>computer science</strong>. I like solving algorithmic puzzles, getting caffinated at odd times of day, coding in <strong>Python</strong> and <strong>Javascript</strong>. Few years back I started participating in programming contests and I've been hooked ever since. Also, I have a knack for minimal UX. If you want to hire me or need a hand with something or just want to say hi, <a href="#contact" onclick="contact()">contact me</a>.'''
-
-# List for contact page
-CONTACT_LIST = [
-  '<img src = "../static/img/facebook.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://www.facebook.com/Rajat.legend">Facebook</a></img>', 
-  '<img src = "../static/img/googleplus.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://plus.google.com/u/0/117644368358855184827/posts">Google+</a></img>', 
-  '<img src = "../static/img/twitter.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://twitter.com/thisisrajat">Twitter</a></img>', 
-  '<img src = "../static/img/linkedin.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "http://in.linkedin.com/in/thisisrajat">LinkedIn</a></img>',
-  '<img src = "../static/img/github.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "https://github.com/thisisrajat/">Github</a></img>',
-  '<img src = "../static/img/skype.png" height="32px" width="32px">&nbsp;&nbsp;&nbsp;<a href = "#">Skype @thisisrajatjain</a></img>',
-  '<img src = "../static/img/mail.png" height="26px" width="32px">&nbsp;&nbsp;&nbsp;<a href= "mailto:rajat@rajatja.in">Mail</a></img>'
-]
 
 # Index page @ / and /index
 @app.route('/')
 @app.route('/index')
 def index():
-  return render_template('base.html', vars=vars)
+  print request.get_json()
+  return render_template('base.html')
 
-# Render about page
-@app.route('/render/about')
-def render_about_page():
-  return ABOUT_CONTENT
+@app.route('/about')
+def about_page():
+  return render_template('about.html')
 
-# Render contact me
-@app.route('/render/contact')
-def render_contact_page():
-  contact_content = "I am not good at advice! Can I interest you in a sarcastic comment?<br /><br />"
-  shuffle(CONTACT_LIST)
-  for content in CONTACT_LIST:
-    contact_content += content + "<br /><br />"
-  return contact_content
+@app.route('/contact')
+def contact_page():
+  return render_template('contact.html')
+
+@app.route('/facebook')
+def redirect_facebook():
+  return redirect('https://www.facebook.com/Rajat.legend')
+
+@app.route('/twitter')
+def redirect_twitter():
+  return redirect('http://twitter.com/thisisrajat')
+
+@app.route('/googleplus')
+def redirect_googleplus():
+  return redirect('https://plus.google.com/u/0/117644368358855184827/posts')
+
+@app.route('/github')
+def redirect_github():
+  return redirect('https://github.com/thisisrajat/')
+
+@app.route('/email')
+def redirect_email():
+  return redirect('mailto:me@rajatja.in')
+
+@app.route('/linkedin')
+def redirect_linkedin():
+  return redirect('http://in.linkedin.com/in/thisisrajat')
+
+@app.route('/blog')
+def redirect_blog():
+  return redirect("http://blog.rajatja.in")
 
 # Render projects
-@app.route('/render/projects')
+@app.route('/projects')
 def render_projects_page():
   return render_template('projects.html')
 
@@ -66,17 +65,17 @@ def render_resume():
 @app.errorhandler(404)
 def four_oh_four(e):
   index = randint(0, len(error_message) - 1)
-  return render_template('404.html', vars=vars, error_message=error_message[index]), 404
+  return render_template('404.html', error_message=error_message[index]), 404
 
 # Because chill maar na yaar ;)
 @app.route('/chill')
 def chill_maar():
   return render_template('chill.html')
 
-# Booze's Birthday
+# Booze's Birthday 2015
 @app.route('/happy/birthday/booze')
 def booze():
   return render_template('booze.html')
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(host="0.0.0.0")
