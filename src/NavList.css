@@ -1,0 +1,39 @@
+.navigation-list {
+  position: absolute;
+  bottom: 10vh;
+  z-index: 2;
+}
+
+.navigation-list .landing-button {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.landing-button {
+  border-radius: 5px;
+  padding: 15px 20px;
+  color: white;
+  border: 2px solid white;
+  background: transparent;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.landing-button:hover {
+  background: white;
+  color: black;
+}
+
+.landing-icon {
+  color: white;
+  background: transparent;
+}
+
+.landing-icon:hover {
+  background: white;
+  color: black;
+}
+
+.landing-icon:hover svg {
+  fill: black;
+}
