@@ -5,4 +5,4 @@ rsync -a -v build/ ./
 rm -rf build
 echo 'Enter commit message'
 read commitmsg
-git commit -am commitmsg
+git commit -am "$commitmsg"
