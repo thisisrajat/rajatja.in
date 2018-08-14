@@ -50,11 +50,6 @@ class App extends Component {
     return null;
   };
 
-  renderResume = () => {
-    window.location.href = '/resume.pdf';
-    return null;
-  }
-
   render() {
     return (
       <Router>
@@ -63,7 +58,6 @@ class App extends Component {
           <Route path="/about" component={AboutPage} />
           <Route path="/blog" component={this.renderBlog} />
           <Route path="/portfolio" component={PortfolioPage} />
-          <Route path="/resume" component={this.renderResume} />
           <Route path="/connect" component={ConnectPage} />
         </Fragment>
       </Router>

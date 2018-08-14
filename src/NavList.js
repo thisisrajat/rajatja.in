@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import Icon from './Icon';
-
-// import aboutMe from './images/about.svg';
-
 import "./NavList.css";
 
 function NavList({
@@ -23,10 +19,6 @@ function NavList({
 
       <Link to="/blog" className="landing-button">
         Blog
-      </Link>
-
-      <Link to="/resume" className="landing-button">
-        Resume
       </Link>
 
       <Link to="/portfolio" className="landing-button">
