@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 import "./Portfolio.css";
 
 const goToLink = (href) => () => {
+  console.log(href);
   if (href) {
     window.open(href, '_blank');
   }
